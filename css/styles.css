@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    height: 350px;
+    width: 100vh;
+    margin-top: 100px;
+}
+.floor{
+    position: absolute;
+    z-index: -2;
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(255, 145, 0);
+}
+.right{
+    position: absolute;
+    bottom: 25px;
+    left: 70.2%;
+}
+.pole{
+    margin-top: -75px;
+    height: 50px;
+    width: 25px;
+    background-color: rgb(76, 43, 0);
+}
+.pole-left{
+    margin-left: 975px;
+}
+.circle{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: brown;
+    margin-top: -25px;
+    outline: 5px solid white;
+    animation-name: move ;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    left: 0;
+}
+@keyframes move{
+    0%{
+        left: 30px;
+    }
+    100%{
+        left: 920px;
+    }
+}
+.circle::after{
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: -28px;
+    top: 25px;
+    height: 10px;
+    width: 25px;
+    border-top-right-radius:12.5px ;
+    box-shadow: 10px -5px 1px 5px rgb(255, 255, 255);
+}
+.circle::before{
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 53px;
+    top: 25px;
+    height: 10px;
+    width: 25px;
+    border-top-left-radius:12.5px ;
+    box-shadow: -10px -5px 1px 5px rgb(255, 255, 255);
+}
+.circle-right{
+    left:950px ;
+    animation-direction: reverse;
+}
+.circle:hover{
+    animation-play-state: paused;
+}
+.circle1{
+    animation-delay: 5s;
+}
+.circle2{
+    animation-delay: 10s;
+}
+.circle3{
+    animation-delay: 15s;
+}
+.circle4{
+    animation-delay: 20s;
+}
+.circle5{
+    animation-delay: 25s;
+}
+
